@@ -81,7 +81,8 @@ void display(int l,hn*head[l])
 }
 int main()
 {
-    int i,l,e,k;
+    int i,l,e;
+    char k;
     printf("Enter hashtable size:");
     scanf("%d",&l);
     if(l<=0)
@@ -91,32 +92,32 @@ int main()
     head[i]=NULL;
     while(1)
     {
-        printf("Enter 1 to insert,2 to delete,3 to search, 4 to print,0 to exit:");
-        scanf("%d",&k);
+        printf("Enter 1 to insert,2 to delete,3 to search, 4 to print,any other key to exit:");
+        scanf(" %c",&k);
         switch(k)
         {
-            case 1:
+            case '1':
             {
                 printf("Enter element to insert:");
                 scanf("%d",&e);
                 insert(l,e,head);
                 break;
             }
-            case 2:
+            case '2':
             {
                 printf("Enter element to delete:");
                 scanf("%d",&e);
                 delete(l,e,head);
                 break;
             }
-            case 3:
+            case '3':
             {
                 printf("Enter element to search:");
                 scanf("%d",&e);
                 search(l,e,head);
                 break;
             }
-            case 4:
+            case '4':
             {
                 display(l,head);
                 break;
