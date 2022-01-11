@@ -76,9 +76,9 @@ cn* delete(cn*head,int e)
     printf("Element not found\n");
     return head;
 }
-cn* insert(cn*head,int p,int e,int l)
+cn* insert(cn*head,int p,int e)
 {
-    int i;
+    int i,l=length(head);
     cn* h=head,*t=head;
     cn*nn=(cn*)malloc(sizeof(cn));
     nn->d=e;
@@ -122,8 +122,7 @@ int main()
             {
                 printf("Enter position and element to insert\n");
                 scanf("%d%d",&p,&e);
-                l=length(h);
-                h=insert(h,p,e,l);
+                h=insert(h,p,e);
                 break;
             }
             case 2:
