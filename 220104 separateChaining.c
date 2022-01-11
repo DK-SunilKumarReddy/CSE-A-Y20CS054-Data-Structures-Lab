@@ -20,7 +20,7 @@ hn* createNode()
     t->next=NULL;
     return t;
 }
-hn* delete(int l,int e,hn* head[l])
+void delete(int l,int e,hn* head[l])
 {
     int i;
     hn* t1,*t2,*t3;
@@ -34,13 +34,12 @@ hn* delete(int l,int e,hn* head[l])
                 t3=head[i],head[i]=head[i]->next,free(t3);
                 else
                 t2->next=t1->next,free(t1);
-                return head[l];
+                return;
             }
             t2=t1;
             t1=t1->next;
         }
     printf("Element not found\n");
-    return head[l];
 }
 void insert(int l,int e2,hn*head[l])
 {
@@ -107,7 +106,7 @@ int main()
             {
                 printf("Enter element to delete:");
                 scanf("%d",&e);
-                head[l]=delete(l,e,head);
+                delete(l,e,head);
                 break;
             }
             case 3:
