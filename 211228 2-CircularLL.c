@@ -106,7 +106,8 @@ cn* insert(cn*head,int p,int e)
 }
 int main()
 {
-    int l,p,e,k;
+    int l,p,e;
+    char k;
     cn*h;
     printf("enter size\n");
     scanf("%d",&l);
@@ -114,25 +115,25 @@ int main()
     h=createList(l);
     while(1)
     {
-        printf("Enter 1 to insert, 2 to delete, 3 to print list, 0 to exit:");
-        scanf("%d",&k);
+        printf("Enter 1 to insert, 2 to delete, 3 to print list, any other key to exit:");
+        scanf(" %c",&k);
         switch(k)
         {
-            case 1:
+            case '1':
             {
                 printf("Enter position and element to insert\n");
                 scanf("%d%d",&p,&e);
                 h=insert(h,p,e);
                 break;
             }
-            case 2:
+            case '2':
             {
                 printf("Enter element to delete\n");
                 scanf("%d",&e);
                 h=delete(h,e);
                 break;
             }
-            case 3:
+            case '3':
             {
                 printList(h);
                 break;
