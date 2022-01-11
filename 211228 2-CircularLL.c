@@ -114,7 +114,7 @@ int main()
     h=createList(l);
     while(1)
     {
-        printf("Enter 1 to insert, 2 to delete, 3 to print list, any other key to exit:");
+        printf("Enter 1 to insert, 2 to delete, 3 to print list, 0 to exit:");
         scanf("%d",&k);
         switch(k)
         {
