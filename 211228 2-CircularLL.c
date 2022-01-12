@@ -37,7 +37,7 @@ void printList(cn*h)
         printf("%d\t",t->d);
         t=t->next;
     }
-    printf("%d",t->d);
+    printf("%d\n",t->d);
 }
 int length(cn*h)
 {
