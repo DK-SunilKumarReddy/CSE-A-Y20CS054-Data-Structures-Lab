@@ -7,9 +7,7 @@ typedef struct hashing
 }hn;
 int hash(int k,int l)
 {
-    int i;
-    i=k%l;
-    return i;
+    return k%l;
 }
 hn* createNode()
 {
@@ -44,7 +42,7 @@ void delete(int l,int e,hn* head[l])
 void insert(int l,int e2,hn*head[l])
 {
     int i=hash(e2,l),j;
-    hn* newn=(hn*)malloc(sizeof(hn)),*t=head[i];
+    hn* newn=(hn*)malloc(sizeof(hn));
     newn->d=e2;
     newn->next=head[i];
     head[i]=newn;
