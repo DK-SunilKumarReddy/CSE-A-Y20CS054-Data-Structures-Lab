@@ -92,8 +92,10 @@ pt* addPolynomial(pt*s1,pt*s2)
   free(t);
   if(s1!=NULL)
   t2->next=s1;
-  if(s2!=NULL)
+  else if(s2!=NULL)
   t2->next=s2;
+  else
+  t2->next=NULL;
   return s;
 }
 void display(pt * list)
