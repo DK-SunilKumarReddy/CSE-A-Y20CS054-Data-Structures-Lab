@@ -45,7 +45,7 @@ int main()
     }
     printf("Enter destination coordinates:");
     scanf("%d%d",&g,&h);
-    if(a[g][h]==0||g>=m||h>=n)
+    if(g>=m||h>=n||a[g][h]==0)
     {printf("Path cannot be found\n");return 0;}
     while(top!=-1)
     {
