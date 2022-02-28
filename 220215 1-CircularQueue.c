@@ -44,11 +44,11 @@ void delete()
 }
 void printQueue()
 {
-    for(int i=f;i<=r;i=((i+1)%n))
+    for(int i=f;;i=((i+1)%n))
     {
     printf("%d\t",cq[i]);
     if(i==r)
-    return;
+    break;
     }
     printf("\n");
 }
